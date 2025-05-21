@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/styles-nosotros/style.css" />
+    <title>Nosotros</title>
+  </head>
+
+  <body>
+    <!--Navbar-->
+
+    <div id="header"></div>
+
+    <!--Descripción del proyecto-->
+    <div class="card-text-center">
+      <div class="card-body">
+        <h1 class="card-title1">L'ATELIER DE LA BIÈRE</h1>
+        <br />
+        <h3 class="card-title">
+          Distribuimos más que cerveza: entregamos distinción
+        </h3>
+        <p id="txtDescripcion" class="card-text">
+          L’Atelier de la Bière es una empresa mexicana especializada en la
+          distribución de cervezas a nivel nacional. Su identidad corporativa se
+          basa en valores como la eficiencia logística, la calidad en el
+          servicio, la responsabilidad con sus clientes y un profundo respeto
+          por la cultura cervecera.
+        </p>
+      </div>
+      <div class="row" style="margin-top: 20px">
+        <div
+          class="card"
+          style="width: 24rem; margin-right: 10px; margin-left: 10px"
+        >
+          <div class="card-body">
+            <h5 class="card-title">Misión</h5>
+            <p class="txtCardMV" class="card-text">
+              Misión: El trabajo será de manera eficiente, responsable y de alta
+              calidad, haciendo que apoyemos las marcas locales y fortalezca más
+              la cultura de la cervecería.
+            </p>
+          </div>
+        </div>
+        <div
+          class="card"
+          style="width: 24rem; margin-right: 10px; margin-left: 10px"
+        >
+          <div class="card-body">
+            <h5 class="card-title">Visión</h5>
+            <p class="txtCardMV" class="card-text">
+              Se impulsará el crecimiento y el desarrollo de las industrias de
+              las cervecerías locales. Se garantiza compromiso, responsabilidad,
+              es decir, al momento de distribuir al producto. Se crea alianzas,
+              buen desempeño laboral, colaboraciones, etc. Tanto nuestras
+              acciones y nuestro trabajo serán reflejados bajo la honestidad y a
+              si mismo la coherencia
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Biografias de los integrantes en cards-->
+    
+    <div class="container-lg">
+      <div
+        id="list-items"
+        class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4"
+      >
+        <!-- Aquí se insertarán dinámicamente las cards -->
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script>
+      //Cargar el conetenido de header
+      fetch("navTemplete.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+        });
+    </script>
+    <script>
+      //Cargar el conetenido de footer
+      fetch("footerTemplate.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/js_navbar/navbar-session.js"></script>
+    <script type="module" src="./js/js_nosotros/main.js"></script>
+  </body>
+</html>
