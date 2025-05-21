@@ -14,24 +14,6 @@ function addItem(item, index) {
                 </div>
             </div>
         </div>
-
-        <!-- Modal -->
-        <div class="modal fade" id="${modalId}" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-            aria-labelledby="${modalId}Label" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal-color">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="${modalId}Label">${item.name}</h1>
-                    </div>
-                    <div class="modal-body">
-                        ${item["descripción"]}
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="botonModal" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
         `;
     const itemsContainer = document.getElementById("list-items");
     itemsContainer.innerHTML += itemHTML;
